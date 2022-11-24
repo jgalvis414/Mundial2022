@@ -6,11 +6,16 @@ const channels = [
     {
         name: 'dSports',
         url: 'https://dtvott-abc.akamaized.net/dash_live_1057/manifest.mpd?&ck=eyJhN2UwOWM2ZjQ3YWY1N2U5OTliNzg5ZWI1NGQzMjU1ZCIgOiAiMjYzZjZkYjEyZDZmOWFhNzJmMmNjOWIwZWYyZTI2YjIifQ=='
+    }, {
+        name: 'prueba',
+        url: 'blob:https://usermarket.bond/1932b2e9-5ef2-4f62-8987-c652afad0c9a'
     },
     // {
     //     name: 'directvSports',
     //     url: 'https://dtvott-abc.akamaized.net/dash_live_1057/manifest.mpd?&ck=eyJhN2UwOWM2ZjQ3YWY1N2U5OTliNzg5ZWI1NGQzMjU1ZCIgOiAiMjYzZjZkYjEyZDZmOWFhNzJmMmNjOWIwZWYyZTI2YjIifQ=='
     // },
+
+    
     {
         name: 'tycSports',
         url: 'https://1240-vos.dtvott.com/DASH/manifest.mpd?&ck=eyI0ZDQ1Yjc5ZDQ0ODczNDM1ODkwNThhYjQ5ZGRmOGNmMCI6ImFhN2Y5NWY3MWEzY2ZlNDBhYTU5OTA0ZjkyODVhZjcyIn0='
@@ -36,7 +41,7 @@ const changeChannel = (arr, i = 0) => location.hash = arr[i].name;
 
 const validHash = (hash) => {
     // saque esté canal del if hash === '#directvSports'
-    if( hash === '#tycSports' || hash === '#tvPublica' || hash === '#dSports' || hash === '#deporTv'){
+    if( hash === '#tycSports' || hash === '#tvPublica' || hash === '#dSports' || hash === '#deporTv'|| hash === '#prueba'){
         count = detectIndex(hash);
         let {url} = channels[count];
         return url;
